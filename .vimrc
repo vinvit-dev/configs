@@ -1,7 +1,7 @@
 " Plagin
 set nocompatible
 filetype off
-set rtp+=~/vimfiles/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'preservim/nerdtree'
