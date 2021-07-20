@@ -1,31 +1,36 @@
-" Plagin
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+ "Plagin
+call plug#begin('~/.vim/plugged')
 
-Plugin 'preservim/nerdtree'
-Plugin 'joshdick/onedark.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'easymotion/vim-easymotion'
+Plug 'preservim/nerdtree'
+Plug 'joshdick/onedark.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'mattn/emmet-vim'
+Plug 'preservim/nerdcommenter'
+Plug 'itchyny/lightline.vim'
+Plug 'vim-scripts/AutoComplPop'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Basic config
 let g:mapleader=','
-set number
+set relativenumber
 syntax on
 set hlsearch
 set incsearch
-" set expandtab
-set tabstop=2
+set expandtab
+set tabstop=1
 set backup
 set backupdir=~/.vim/_backups
 set directory=~/.vim/_swaps
+set laststatus=2
+set noshowmode
+filetype plugin on
+set complete+=kspell
+set updatetime=100
 
 " Colorscheme
 colorscheme onedark 
