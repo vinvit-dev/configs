@@ -12,17 +12,19 @@ Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 " Basic config
 let g:mapleader=','
-set relativenumber
+" set relativenumber
+set number
 syntax on
+set tabstop=4
 set hlsearch
 set incsearch
-set expandtab
-set tabstop=1
 set backup
 set backupdir=~/.vim/_backups
 set directory=~/.vim/_swaps
@@ -33,7 +35,10 @@ set complete+=kspell
 set updatetime=100
 
 " Colorscheme
-colorscheme onedark 
+" let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
+set bg=dark
 
 " NERDTree config
 nnoremap <C-n> :NERDTreeToggle<CR>
