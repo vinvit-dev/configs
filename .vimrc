@@ -14,7 +14,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
-
+"Plug 'xuhdev/vim-latex-live-preview'
 call plug#end()
 
 " Basic config
@@ -23,6 +23,7 @@ let g:mapleader=','
 set number
 syntax on
 set tabstop=4
+set expandtab
 set hlsearch
 set incsearch
 set backup
@@ -36,9 +37,9 @@ set updatetime=100
 
 " Colorscheme
 " let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
-set bg=dark
+" let g:rehash256 = 1
+" colorscheme molokai
+" set bg=dark
 
 " NERDTree config
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -46,3 +47,8 @@ nnoremap <C-m> :NERDTreeFocus<CR>
 
 " Mappings
 map <Leader> <Plug>(easymotion-prefix)
+inoremap jk  <esc>
+
+" Copy/Paste
+vnoremap <C-c> "+y
+" map <C-v> "+P
