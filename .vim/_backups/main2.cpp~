@@ -1,0 +1,66 @@
+#include <SDL2/SDL.h>
+#include <iostream>
+
+using namespace std;
+
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+SDL_Window* win = NULL;
+SDL_Surface* sur = NULL;
+SDL_Surface* hello = NULL;
+
+int init(){
+
+	if(SDL_Init(SDL_INIT_VIDEO) != 0){
+		cout << "SDL could not initialize! SDL_ERROR: " << SDL_GetError() << endl;
+		return 1;
+	}
+
+	win = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+
+	if (win == NULL){
+		cout << "Window could not be created! SDL_ERROR: " << SDL_GetError() << endl;
+		return 2;
+	}
+
+	sur = SDL_GetWindowSurface(win);	
+
+	return 0;
+
+}
+
+int loadMedia(){
+	 hello = SDL_LoadBMP("../02_getting_an_image_on_the_screen/hello_world.bmp");
+
+	if (hello == NULL){
+		cout << "Image could not be load! SDL_Error: " << SDL_GetError() << endl;
+		return 3;
+	}
+	return 0;
+}
+
+void close(){
+	SDL_FreeSurface(hello);
+	hello = NULL;
+
+	SDL_DestroyWindow(win);
+	win = NULL;
+
+	SDL_Quit();
+}
+
+int main(int argc, char* args[]){
+
+	if ( int res = init() != 0) return res;
+	if ( int res = loadMedia() != 0) return res;
+	SDL_BlitSurface(hello, NULL, sur, NULL);	
+
+	SDL_UpdateWindowSurface(win);
+
+	SDL_Delay(5000);
+
+	close();
+
+	return 0;
+}

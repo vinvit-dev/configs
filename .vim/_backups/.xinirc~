@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# ~/.xinitrc
+#
+
+if [[ $1 == 'dwm' ]]
+then
+    exec dwm
+elseif [[ $1 == 'i3' ]]
+then
+    exec i3
+else "Choose a window manager"
+fi

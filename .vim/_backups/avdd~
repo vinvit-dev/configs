@@ -1,0 +1,142 @@
+#!/bin/bash
+
+USAGE="
+USAGE: avdd [<mod_list>='cpu mem bl vol-amixer bat dt'|-h|-[-]help]
+            [<pre>=' '] [<sep_l>='| '] [<sep_r>=' '] [<suf>=' ']
+
+        mod_list
+                A comma or space separated list of modules that define both
+                the order and the content of the status bar.
+
+        pre     The prefix prepended to the beginning of the status bar.
+
+        sep_l   The left separator between status bar sections.
+
+        sep_r   The right separator between status bar sections.
+
+        suf     The suffix appended to the end of the status bar.
+
+EXAMPLES:
+
+        Any of these will display this help message.
+
+                avdd -h
+                avdd -help
+                avdd --help
+
+        Run the daemon in the background to create a status bar with the
+        default sections, prefix, separators, and suffix.
+
+                avdd &
+
+        Run the daemon in the background to create a status with only the
+        volume and date/time sections, with the entire status between square
+        brackets, and each section surrounded by angle brackets. Note that
+        the first left separator and the last right separator are stripped
+        from the output, so if you want them, simply include them in the
+        prefix and suffix as shown here.
+
+                avdd 'vol-amixer dt' '[<' '<' '>' '>]' &
+"
+DEFAULT_MOD_LIST='cpu mem bl vol-amixer bat dt'
+DEFAULT_PRE=' '
+DEFAULT_SEP_L='| '
+DEFAULT_SEP_R=' '
+DEFAULT_SUF=' '
+MOD_DIR="$(dirname "$0")"/mod
+FIFO=/tmp/avdd-fifo-"$("$(dirname "$0")"/rpid)"
+
+mod_list="${1-${DEFAULT_MOD_LIST}}"
+
+# Check if the user needs help
+if [[ "${mod_list}" =~ ^(-h|-(-)?help)$ ]]; then
+  printf '%s' "${USAGE}" 1>&2
+  exit 0
+fi
+
+pre="${2-${DEFAULT_PRE}}"
+sep_l="${3-${DEFAULT_SEP_L}}"
+sep_r="${4-${DEFAULT_SEP_R}}"
+suf="${5-${DEFAULT_SUF}}"
+
+# Map the module file name to the module function
+mod_to_fn() {
+  printf 'mod_%s' "${1//-/_}"
+}
+
+# For each module in the list, if the module file exists then source it,
+# add its name to the ordered array, and call its function and cache the value
+declare -A stat_cache
+IFS=', ' read -r -a mods <<< "${mod_list}"
+for mod in "${mods[@]}"; do
+  mod_file="${MOD_DIR}/${mod}"
+  if [[ -r "${mod_file}" ]]; then
+    # shellcheck source=/dev/null
+    source "${mod_file}"
+    stat_cache_ordered_mods+=("${mod}")
+    stat_cache["${mod}"]="$(eval "$(mod_to_fn "${mod}")")"
+  fi
+done
+
+# Construct and display the status by looping over the cached values in order
+draw_status() {
+  local mod stat
+  for mod in "${stat_cache_ordered_mods[@]}"; do
+    printf -v stat '%b%b%b%b' \
+      "${stat}" "${sep_l}" "${stat_cache[${mod}]}" "${sep_r}"
+  done
+
+  # Trim the leading left separator and trailing right separator, and display
+  # the status
+  local -ri offset=${#sep_l}
+  local -ri len=$((${#stat} - offset - ${#sep_r}))
+  xsetroot -name "${pre}${stat:${offset}:${len}}${suf}"
+}
+
+# Draw the initial status
+draw_status
+
+# Process a list of mods. If a mod is in the status cache, call the module
+# function to get the new value for that section of the status bar. If any
+# of the new values are different from the cached ones, update the cache
+# and redraw the status bar once after all the mods are processed.
+process_mods() {
+  local mod new_val is_changed
+  for mod in "$@"; do
+    if [[ -v stat_cache[${mod}] ]]; then
+      new_val="$(eval "$(mod_to_fn "${mod}")")"
+      if [[ "${new_val}" != stat_cache["${mod}"] ]]; then
+        stat_cache["${mod}"]="${new_val}"
+        is_changed=1
+      fi
+    fi
+  done
+  if [[ -v is_changed ]]; then draw_status; fi
+}
+
+# Setup the named pipe to receive commands
+if [[ ! -p "${FIFO}" ]]; then mkfifo "${FIFO}"; fi
+# shellcheck disable=SC2064
+trap "rm -f ${FIFO}" EXIT
+
+# Each time the pipe is emptied out, the inner while loop will finish, so
+# wrap it in an infinte loop to keep blocking until there is data on the pipe
+while :; do
+  while read -r fifo_mod_list; do
+    case "${fifo_mod_list}" in
+      daem_all)
+        process_mods "${mods[@]}"
+        ;;
+      daem_quit)
+        exit 0
+        ;;
+      daem_*)
+        ;;
+      *)
+        IFS=', ' read -r -a fifo_mods <<< "${fifo_mod_list}"
+        process_mods "${fifo_mods[@]}"
+        ;;
+    esac
+  done < "${FIFO}"
+done
+

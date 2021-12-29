@@ -1,0 +1,500 @@
+vim dwm.desktop
+sudo vim dwm.desktop
+git clone https://dl.suckless.org/dwm/dwm-6.2.tar.gz
+git clone https://dl.suckless.org/dwm/dwm-6.2
+mkdir suckless
+ls
+cd suckless/
+git clone https://suckless.org/dwm/dwm-6.2
+git clone https://git.suckless.org/dwm/dwm-6.2
+git clone git://git.suckless.org/dwm
+ls
+cd dwm
+ls
+make install
+vim /etc/ly/config.ini 
+cd
+ls
+ls -a
+yay -S cdm
+ls /usr/bin/
+ls /usr/bin/ | grep dwm
+ls /usr/bin/ | grep "dwm"
+cd suckless/dwm/
+ls
+ls /usr/local/bin/
+ls -a /usr/local/bin/
+sudo vim /usr/share/xsessions/
+cd suckless/dwm
+make clear install
+make clean install
+sudo make clean install
+vim suckless/dwm/config.h
+cd suckless/dwm/
+sudo make install
+cd suckless/dwm/
+vim config.h
+cd Documents/vuz
+vim Progriming lekcie.txt
+cd ..
+cd vuz
+ді
+ді
+ls
+vim Untitled\ 1.docx 
+sudo pacman -S latex2
+sudo pacman -S latex2rtf
+sudo pacman -S latex
+latex2rtf 
+sudo pacman -S jopkin
+sudo pacman -S jopl
+yay -S joplin
+sudo pacman -S libgsf libxss
+sudo pacman -Syu
+yay -S joplin
+sudo pacman -S xfce4
+vim .vimrc
+vim Documents/vuz/test.txt
+picom
+picom
+yay -S latex
+sudo vim /etc/pacman.conf 
+sudo pacman -Syu
+sudo pacman -Sy
+sudo vim /etc/pacman.conf 
+clear
+sudo pacman -S texlive-full
+sudo pacman -S texlive-most texlive-lang
+yay -S polybar
+yay -S pcloud
+yay -S pcloud-drive
+yay -S pcloud-drive
+lsblk
+mkdir usb-stick
+sudo mount /dev/sdb usb-stick/
+sudo mount /dev/sdb1 usb-stick/
+sudo pacman -S ntfs-3g 
+clear
+sudo mount /dev/sdb1 usb-stick/
+cd usb-stick/
+ls
+./pcloud 
+pcload
+cploud
+cd pcloud
+cd ..
+ls
+cd pCloq
+cd pCloudDrive/
+ls
+ls
+cd ..
+cd usb-stick/
+sudo mv pcloud /bin/
+cd ../pCloudDrive/
+ls
+cd vuz
+ls
+sudo pacman -S feh vlc
+feh IMG_20210901_145708.jpg 
+feh IMG_20210901_145708.jpg 
+cd feh *
+feh *
+cd ..
+ls
+cd Documents/
+ls
+cd ..
+cd
+cd Documents/
+rm -rf vuz
+vim Documents/vuz/text.txt
+cd Music/
+ls
+:wq
+cd
+clear
+cd Documents/
+lsa
+sudo pacman -S lsd
+lsd
+whereis lsd
+clear
+lsd
+lsd --help
+lsd --icon-theme unicode
+cd
+vim .config/lsd/
+sudo pacman -S ttf-nerd-fonts-symbols
+lsd
+lsd --icon-theme fancy 
+clear
+lsd --icon-theme unicode 
+lsd
+clear
+lsd -a
+lsd -al
+clear
+reboot
+vim .config/i3/config 
+cd Documents/
+ls
+cd configs/
+ls
+cd .
+cd ..
+rm -rf configs
+git colone https:/github.com/vinvit-dev/configs
+git clone https:/github.com/vinvit-dev/configs
+ls
+git clone https://github.com/vinvit-dev/configs
+mv configs/polybar ../.config/
+cd
+cd .config/
+ls
+cd polybar/
+ls
+sudo cp /usr/share/doc/polybar/config exsample_config
+vim config 
+sudo chown vinvit:vinvit exsample_config 
+ls -al
+cd ..
+vim i3/config 
+cd .config/polybar/
+sudo shmod +x launch.sh 
+sudo chmod +x launch.sh 
+ls -ln
+sudo chmod +x config 
+ls
+ls -la
+clear
+sudo pacman -S vifm 
+clear
+cd .config/polybar/
+ls
+vim launch.sh 
+vim config 
+vim launch.sh 
+sudo pacman -S alsa-utils pulseaudio-utils pavucontrol
+sudo pacman -S alsa-utils  pavucontrol
+vim .config/i3/config 
+sudo pacman -S pulse-alsa
+sudo pacman -S pulse-alsa-utils
+sudo pacman -S pulseaudio-alsa
+vim .config/i3/config 
+cd .config/i3
+vim
+xkbcom
+xkbwatch
+xkbcomp
+xkbcli
+xcbcli list
+xkbcli list
+xmodmap
+xmap
+xkbmap
+xev
+xkbcomp config 
+xkbcomp --help
+xkbcomp -a
+clear
+vim config 
+vim config 
+cd ..
+vim i3/config 
+vim polybar/config 
+:
+:q
+:q
+yay -S notion
+:wq
+xfce4-terminal -h
+vim Documents/configs/i3/new_config 
+i3lock --help
+vim .config/polybar/config 
+i3lock -c #222
+i3lock -c "#222"
+i3lock -c "#222222"
+sudo passwd vinvit
+sudo pacman -S playerctl
+sudo pacman -S pulseaudio-jack
+clear
+cd .config/i3
+vim config
+sudo pacman -R nitrogen
+vim .bashrc 
+ls
+celar
+clear
+cd Documents/vuz/
+ls
+cd Programing/
+mkdir linux_labs
+ls
+lsd
+clear
+vim .vimrc
+vim .vimrc 
+ls
+clear
+cd Documents/vuz
+ls
+cd Programing/
+ls
+cd linux_lub
+cd linux_lubs
+cd linux_labs/
+ls
+mkdir lab_work_01
+mkdir lab_work_01/lab_work_01_01
+vim lab_work_01/lab_work_01_01/
+cd lab_work_01/lab_work_01_01/
+ls
+clear
+vim main.c
+vim main.c
+cd Documents/vuz
+cd Programing/
+evince Програмуваня\ лаб.\ 1-2.pdf 
+cd Documents/vuz/Programing/
+mv Програмуваня\ лаб.\ 1-2.pdf  labs_1-2.pdf
+evince labs_1-2.pdf 
+cd Documents/vuz/Programing/linux_labs/lab_work_01/
+vim main.c
+cd lab_work_01_01/
+cd ..
+ls
+cd lab_work_01_01/
+ls
+vim main.c 
+cd Documents/vuz/Programing/linux_labs/lab_work_01/lab_work_01_01/
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+./main 
+sudo reboot
+vim .config/polybar/config 
+cd Documents/
+xfce4-terminal &
+cd vuz/Programing/linux_labs/lab_work_01/lab_work_01_01/
+ls
+ls -a
+ls -la
+ls -ln
+ls -ln
+ls -la
+clear
+xfce4-terminal &
+xfce4-terminal &
+vim main.c 
+g++ main.c -o main
+./main
+clear
+g++ main.c -o main
+./main
+./main
+:wq
+g++ main.c -o main
+:wq
+./main
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main
+g++ main.c -o main
+g++ main.c -o main
+cd Documents/vuz/Programing/windows-labs/lab_work_01/ind_n18/
+ls
+cd ind_n18/
+ls
+vim main.c 
+libreoffice main.c 
+cd Documents/vuz/Programing/
+ls
+evince labs_1-2.pdf &
+cd
+vim .config/i3/
+cd Documents/vuz
+cd Programing/linux_labs/lab_work_01/lab_work_01_01/
+ls
+vim main.c
+vim main.c
+g++ main.c -o main
+main
+./main
+./main
+ls
+ls -a
+cd .vim/
+ls
+cd _swaps/
+ls
+cd ..
+cd plugged/
+ls
+cd auto-pairs/
+ls
+cd plugin/
+ls
+vim auto-pairs.vim 
+cd
+cd Documents/vuz/Programing/
+ls
+evince labs_1-2.pdf 
+evince labs_1-2.pdf &
+cd
+clear
+vim .config/i3/config
+sudo pacman -S zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ls
+zsh
+vim .bashrc 
+cd Documents/prob-code/
+ls
+g++ test.c -o test
+./test 
+g++ test.c -o test
+./test 
+g++ test.c -o test
+./test 
+g++ test.c -o test
+./test 
+g++ test.c -o test
+./test 
+g++ test.c -o test
+g++ test.c -o test
+cd Documents/
+mkdir prob-code
+cd prob-code/
+vim test.c
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main 
+g++ main.c -o main
+./main 
+g++ main.c -o main
+./main 
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main
+:wq
+g++ main.c -o main
+:wq
+./main
+g++ main.c -o main
+./main
+./main
+./main
+g++ main.c -o main
+./main
+g++ main.c -o main
+./main
+ls
+cd ..
+ls
+rm lab.docx 
+clear
+./main
+cd lab_work_01_01
+./main 
+cd ../lab_work_01_03
+ls
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+g++ main.c -o main
+
+ls
+clear
+sudo pacman -S python3 python-pip
+pip install flask tkinter dhango
+pip install flask Tk
+pip install django
+clear
+python
+clear
+cd Documents/code/python/
+ls
+cd wallet-app/
+ls
+python prob.py 
+vim prob.py 
+python prob.py 
+vim main.py 
+py main.py 
+python main.py 
+vim main.py 
+vim main.py 
+vim main.py 
+python main.py 
+:w
+vim main.py 
+vim main.py 
+python main.py 
+vim main.py 
+clear
+cd ..
+cd ..
+cd python/
+ls
+mkdir old-code
+python -m django --version
+ls
+rm -rf old-code/
+mkdir django
+django-admin startproject firstsite
+python django-admin startproject firstsite
+python django startproject firstsite
+clear
+django-admin startprogect mysite
+python django-admin startprogect mysite
+python django admin startprogect mysite
+python django startprogect mysite
+ckear
+clear
+sudo python3-django
+sudo python-django
+sudo pacman -S python3-django
+sudo pacman -S python-django
+rm -rf django/
+mkdir sites
+cd sites/
+ls
+django-admin startproject firstsite
+cd firstsite/
+ls
+dir
+dir
+dev
+ls
+tree
+ls -R
+sudo pacman -S tree
+tree
+vim 
+python manage.py 
+python manage.py runserver
+clear

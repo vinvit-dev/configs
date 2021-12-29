@@ -1,0 +1,67 @@
+from colorama import init
+from colorama import Back
+import os
+
+init()
+
+map1 = [
+    '111111111111111111111111111111',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    'l      p                     l',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '1                            1',
+    '111111111111111111111111111111'
+]
+
+py = 0
+px = 0
+
+
+def drawMap(map):
+
+    global px, py
+    for y in range(len(map)):
+        for x in range(len(map[y])):
+            if map[y][x] == '1':
+                print(Back.WHITE + '  ', end='')
+            elif map[y][x] == ' ':
+                print(Back.BLACK + '  ', end='')
+            elif map[y][x] == 'l':
+                print(Back.RED + '  ', end='')
+            elif map[y][x] == 'p':
+                print(Back.GREEN + '  ', end='')
+                px = x
+                py = y
+        print()
+
+
+drawMap(map1)
+act = ''
+
+while act != 'e':
+    print(Back.BLACK, end='')
+    act = input('Action: ')
+
+    if act == 's':
+        map1[py], map1[py + 1] = map1[py + 1], map1[py]
+    elif act == 'w':
+        map1[py], map1[py - 1] = map1[py - 1], map1[py]
+    elif act == 'd':
+        map1[py] = map1[py].replace('p ', ' p')
+    elif act == 'a':
+        map1[py] = map1[py].replace(' p', 'p ')
+    os.system('clear')
+    drawMap(map1)
+

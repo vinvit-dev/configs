@@ -1,0 +1,5 @@
+snippet div "<div>...</div>"
+<div $1 >
+	$0
+</div>
+endsnippet

@@ -1,0 +1,17 @@
+<html>
+        <head>
+                <title>ToDo List</title>
+        </head>
+        <body>
+                <h1>ToDo List</h1>
+                {% if task_groups %}
+                <ul>
+                        {% for groups in task_groups %} 
+                        <li><a href="{ % url todolist:detail %}"></a></li>
+                        {% endfor %}
+                </ul>
+                {% else %}
+                <P>No task gtoups found</p>
+                {% endif %}
+        </body>
+</html>

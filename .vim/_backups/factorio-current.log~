@@ -1,0 +1,31 @@
+   0.000 2021-10-27 11:01:36; Factorio 0.14.23 (build 25374, linux32, alpha)
+   0.001 Operating system: Linux
+   0.001 Program arguments: "/home/vinvit/game/factorio/bin/i386/factorio" 
+   0.001 Read data path: /home/vinvit/game/factorio/data
+   0.001 Write data path: /home/vinvit/game/factorio
+   0.001 Binaries path: /home/vinvit/game/factorio/bin
+   0.249 System info: [CPU:          Intel(R) Atom(TM) CPU N450   @ 1.66GHz, 2 cores, RAM: 982MB]
+   0.321 Display options: [FullScreen: 0] [VSync: 0] [UIScale: 100%] [MultiSampling: OFF] [Screen: 255]
+   0.343 Available display adapters: 1
+   0.344  [0]: resolution 1024x600px at [0,0]
+   0.344 Create display on adapter 0. Size 924x500 at position [40, 32].
+   0.627 Initialised OpenGL:[0] Mesa DRI Intel(R) Pineview M x86/MMX/SSE2; driver: 1.4 Mesa 21.2.1
+   1.793 The largest texture size supported by graphics cards it very low (2048). Setting graphics preset to Low.
+   1.793 Graphics options: [Graphics quality: normal] [Video memory usage: low] [Light scale: 25%] [DXT: false]
+   3.497 Loading mod core 0.0.0 (data.lua)
+   3.576 Loading mod base 0.14.23 (data.lua)
+   4.583 Checksum for core: 1291735968
+   4.584 Checksum for mod base: 786624017
+   8.657 Info PlayerData.cpp:55: Local player-data.json available, timestamp 1635319803
+   8.658 Info PlayerData.cpp:62: Cloud player-data.json unavailable
+   9.603 Initial atlas bitmap size is 2048
+   9.606 Created atlas bitmap 2048x158
+   9.607 Created atlas bitmap 2048x1872
+ 183.960 Sprites loaded
+ 184.015 Convert atlas 2048x1872 to: trilinear-filtering 
+ 203.770 Loading sounds...
+ 231.360 Custom inputs active: 0
+ 232.957 Factorio initialised
+ 708.287 Error FileUtil.cpp:284: Can't remove /home/vinvit/game/factorio/temp/currently-playing: No such file or directory
+ 708.841 Info Scenario.cpp:152: Map version 0.14.23-0
+ 709.259 Checksum for script /home/vinvit/game/factorio/temp/currently-playing/control.lua: 1057114497

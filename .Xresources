@@ -1,7 +1,9 @@
 
 URxvt.scrollBar:              false
 URxvt*font:   			      xft:Fantasque Sans Mono:regular:size=10
-URxvt.internalBorder:		      15
+URxvt.internalBorder:		  5
+
+Urxvt*geometry: 100x30
 
 ! Disable ctrl + shift (insert picture mode)
 URxvt.iso14755: false
@@ -38,92 +40,98 @@ URxvt.keysym.C-M-c: builtin-string:
 
 ! URxvt.perl-ext-common: default
 
-! --color scheme
-#define base00 #1d1f21
-#define base01 #282a2e
-#define base02 #373b41
-#define base03 #969896
-#define base04 #b4b7b4
-#define base05 #c5c8c6
-#define base06 #e0e0e0
-#define base07 #ffffff
-#define base08 #CC342B
-#define base09 #F96A38
-#define base0A #FBA922
-#define base0B #198844
-#define base0C #3971ED
-#define base0D #3971ED
-#define base0E #A36AC7
-#define base0F #3971ED
+!! --color scheme
+!#define base00 #1d1f21
+!#define base01 #282a2e
+!#define base02 #373b41
+!#define base03 #969896
+!#define base04 #b4b7b4
+!#define base05 #c5c8c6
+!#define base06 #e0e0e0
+!#define base07 #ffffff
+!#define base08 #CC342B
+!#define base09 #F96A38
+!#define base0A #FBA922
+!#define base0B #198844
+!#define base0C #3971ED
+!#define base0D #3971ED
+!#define base0E #A36AC7
+!#define base0F #3971ED
+!
+!*.foreground:   base05
+!#ifdef background_opacity
+!*.background:   [background_opacity]base00
+!#else
+!*.background:   base00
+!#endif
+!*.cursorColor:  base05
+!
+!*.color0:       base00
+!*.color1:       base08
+!*.color2:       base0B
+!*.color3:       base0A
+!*.color4:       base0D
+!*.color5:       base0E
+!*.color6:       base0C
+!*.color7:       base05
+!
+!*.color8:       base03
+!*.color9:       base08
+!*.color10:      base0B
+!*.color11:      base0A
+!*.color12:      base0D
+!*.color13:      base0E
+!*.color14:      base0C
+!*.color15:      base07
+!
+!! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+!! use 'shell' template to set these if necessary
+!*.color16:      base09
+!*.color17:      base0F
+!*.color18:      base01
+!*.color19:      base02
+!*.color20:      base04
+!*.color21:      base06
+! Molokai theme
+! See: https://gist.github.com/vreon/845878
+xterm*background: #101010
+xterm*foreground: #d0d0d0
+xterm*cursorColor: #d0d0d0
+xterm*color0: #101010
+xterm*color1: #960050
+xterm*color2: #66aa11
+xterm*color3: #c47f2c
+xterm*color4: #30309b
+xterm*color5: #7e40a5
+xterm*color6: #3579a8
+xterm*color7: #9999aa
+xterm*color8: #303030
+xterm*color9: #ff0090
+xterm*color10: #80ff00
+xterm*color11: #ffba68
+xterm*color12: #5f5fee
+xterm*color13: #bb88dd
+xterm*color14: #4eb4fa
+xterm*color15: #d0d0d0
 
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
-!! special
-!*.foreground:   #e6e1dc
-!*.background:   #2b2b2b
-!*.cursorColor:  #e6e1dc
-!
-!! black
-!*.color0:       #2b2b2b
-!*.color8:       #5a647e
-!
-!! red
-!*.color1:       #da4939
-!*.color9:       #da4939
-!
-!! green
-!*.color2:       #a5c261
-!*.color10:      #a5c261
-!
-!! yellow
-!*.color3:       #ffc66d
-!*.color11:      #ffc66d
-!
-!! blue
-!*.color4:       #6d9cbe
-!*.color12:      #6d9cbe
-!
-!! magenta
-!*.color5:       #b6b3eb
-!*.color13:      #b6b3eb
-!
-!! cyan
-!*.color6:       #519f50
-!*.color14:      #519f50
-!
-!! white
-!*.color7:       #e6e1dc
-!*.color15:      #f9f7f3
-!
+! Molokai theme
+! See: https://gist.github.com/vreon/845878
+urxvt*background: #101010
+urxvt*foreground: #d0d0d0
+urxvt*cursorColor: #d0d0d0
+urxvt*color0: #101010
+urxvt*color1: #960050
+urxvt*color2: #66aa11
+urxvt*color3: #c47f2c
+urxvt*color4: #30309b
+urxvt*color5: #7e40a5
+urxvt*color6: #3579a8
+urxvt*color7: #9999aa
+urxvt*color8: #303030
+urxvt*color9: #ff0090
+urxvt*color10: #80ff00
+urxvt*color11: #ffba68
+urxvt*color12: #5f5fee
+urxvt*color13: #bb88dd
+urxvt*color14: #4eb4fa
+urxvt*color15: #d0d0d0
