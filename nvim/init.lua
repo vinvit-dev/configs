@@ -1,0 +1,17 @@
+require("vinvit.plugins-setup")
+require("vinvit.core.options")
+require("vinvit.core.keymaps")
+require("vinvit.core.colorscheme")
+
+require("vinvit.plugins.comment")
+require("vinvit.plugins.nvim-tree")
+require("vinvit.plugins.lualine")
+require("vinvit.plugins.telescope")
+require("vinvit.plugins.cmp")
+require("vinvit.plugins.autopairs")
+require("vinvit.plugins.treesitter")
+
+require("vinvit.plugins.lsp.mason")
+require("vinvit.plugins.lsp.lspsaga")
+require("vinvit.plugins.lsp.lspconfig")
+require("vinvit.plugins.lsp.null-ls")

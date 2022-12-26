@@ -1,5 +1,0 @@
-snippet snip "Snippet" b
-snippet ${1:snippet} "${2:example}"
-${0:snippet text}
-endsnippet
-endsnippet

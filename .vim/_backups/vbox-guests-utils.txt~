@@ -1,3 +1,0 @@
-sudo pacman -S virtualbox-guest-utils-nox
-sudo pacman -S virtualbox-guest-utils
-sudo systemctl enable virtualboxservice.service

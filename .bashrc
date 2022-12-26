@@ -13,6 +13,3 @@ exitstatus()
 
 # PS1='[\u@\h \W]\$ '
 PS1="\[\033[32m\](\u)\[\033[34m\](\w)\n\[\033[0m\]$(exitstatus) >\[\033[0m\] "
-
-alias ls="lsd --color=auto"
-alias lsa="lsd -a --color=auto"

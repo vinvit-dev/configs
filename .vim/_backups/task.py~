@@ -1,7 +1,0 @@
-n = input("Введіть кількість камінців: ")
-ost = int(n)%5
-
-if (ost >= 3):
-    print(5-ost)
-else:
-    print(ost)

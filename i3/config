@@ -259,7 +259,7 @@ bindsym $mod+n exec flameshot gui -p ~/Pictures/screenshorts/
 bindsym $mod+shift+m exec flameshot full -p ~/Pictures/screenshorts/
 
 #Gaps
-gaps inner 2 
+gaps inner 2
 gaps outer 4
 
 # polybar
